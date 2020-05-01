@@ -14,3 +14,7 @@ Once container is up, either:
 **/srv**
 - Custom configuration files to be copyed to container. 
 - Contains Dockerfiles and logs
+
+**/root**
+- Custom code and files.
+ 
