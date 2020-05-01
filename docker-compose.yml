@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+    kali:
+        container_name: kali_docked
+        build:
+            context: .
+            dockerfile: ./srv/kali/Dockerfile
+        volumes:
+            - ./root:/home/root/
+            - vol_kali_postgres:/var/lib/postgresql/
+        ports:
+            - "22:22"
+        command: bash -c "tail -f /dev/null"
+
+volumes:
+    vol_kali_postgres:
